@@ -28,14 +28,22 @@ number_Btn.addEventListener("click", (ev) => {
 
 // =============== Submit Pin ===============
 function submitPin(){
-    if(pin_Input.value == pin_Display.value){
+    if(pin_Display.value.length == 0){
+        error.innerText = "😪 Please, Type Number to open your secret Door :("
+        error.style.display = "block"
+        succeed.style.display = "none"
+    }
+    else if(pin_Input.value == pin_Display.value){
         succeed.style.display = "block"
         error.style.display = "none"
+        pin_Input.value = "😎 Wow you're Great 🧑🏻‍💻"
     } else{
         succeed.style.display = "none"
+        error.innerText = "❌ Pin Didn't Match, Please try again"
         error.style.display = "block"
     }
     pin_Display.value = ""
+    console.log(pin_Display.value.length)
 }
 
 
