@@ -30,7 +30,9 @@ number_Btn.addEventListener("click", (ev) => {
 function submitPin(){
     if(pin_Input.value == pin_Display.value){
         succeed.style.display = "block"
+        error.style.display = "none"
     } else{
+        succeed.style.display = "none"
         error.style.display = "block"
     }
     pin_Display.value = ""
