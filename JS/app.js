@@ -43,7 +43,6 @@ function submitPin(){
         error.style.display = "block"
     }
     pin_Display.value = ""
-    console.log(pin_Display.value.length)
 }
 
 
